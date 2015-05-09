@@ -6,7 +6,7 @@
 #define LOG_PAGE_SIZE       256
 
 //16k
-#define MAX_SIZE 4*4*1024
+#define MAX_SIZE 12*4*4*1024
 
 #define FILEDIR "files"
 #define ROMNAME "spiff_rom.bin"
@@ -110,7 +110,7 @@ void my_spiffs_mount() {
   cfg.phys_addr = 0; // start spiffs at start of spi flash
 
   cfg.phys_erase_block = SPI_FLASH_SEC_SIZE;
-  cfg.log_block_size = SPI_FLASH_SEC_SIZE;
+  cfg.log_block_size = SPI_FLASH_SEC_SIZE*2;
   cfg.log_page_size = LOG_PAGE_SIZE;
 
   cfg.hal_read_f = my_spiffs_read;
