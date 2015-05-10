@@ -1,3 +1,7 @@
+i edited for sming framework. soo this branch will not work with nodemcu :)
+
+
+
 spiffy
 ======
 
